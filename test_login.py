@@ -26,3 +26,5 @@ def test_login(setup):
     driver = setup
     driver.get("https://www.saucedemo.com/")
     login(driver, "standard_user", "secret_sauce")
+    
+    assert "inventory.html" in driver.current_url, "Login failed"
