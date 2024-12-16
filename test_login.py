@@ -20,7 +20,7 @@ def login(driver, user_name, password_name):
     password.send_keys(password_name)
 
     log = wait.until(EC.presence_of_element_located((By.NAME, "login-button")))
-    log.send_keys(Keys.ENTER)
+    log.click()
 
 def test_login(setup):
     driver = setup
